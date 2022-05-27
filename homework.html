@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02 - Formularios en HTML</title>
+    <style>
+        body{
+            margin: 40px;
+            background: #ccc;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+
+        }
+        #nombre{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #edad{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #area{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #botton{
+            margin: auto;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/">
+        <label for="nombre">
+            Nombre
+            <input type="text" id="nombre" name="nombre" placeholder="ingrese su nombre">
+        </label>
+        <label for="edad">
+            Edad
+            <input type="number" id="edad" name="edad" placeholder="ingrese su edad ">
+        </label>
+        <textarea name="frese-favorita" id="area" placeholder="frese favorita "></textarea>
+        <input type="submit" value="enviar" id="botton">
+        <input type="reset" value="restablecer" id="botton">
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+</html>
