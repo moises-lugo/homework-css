@@ -1,0 +1,20 @@
+body{
+    background: #cccc;
+}
+section{
+    border: 1px solid black;
+    margin: 100px 300px;
+}
+h1{
+    text-align: center;
+}
+ul{
+    margin-left: 90px;
+}
+ol{
+    margin-left: 90px;
+}
+.elemento-1 , #elemento-1{
+    color: #f00;
+    font-size: 2em;
+}
