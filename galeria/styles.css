@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://www.caracteristicas.co/wp-content/uploads/2018/07/oso-panda-1-e1571853708395.jpg);
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+   align-items: center;
+}
+.galeria{
+     background-color: #0505;
+}
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    transition: 2s;
+}
+.fotos img{
+    width: 300px;
+    height: 300px;
+    opacity: 0.7;
+}
+.fotos img:hover{
+    transform: scale(1.2);
+    opacity: 1;
+    border: 5px solid #000;
+}
