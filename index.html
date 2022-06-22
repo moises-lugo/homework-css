@@ -4,15 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio de Introducción a HTML en OpenBootcamp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Elementos de Interés en Bootstrap</title>
 </head>
 <body>
-   <!-- Aprendiendo a documentar mi código con OpenBootcamp
- -->
- <ul>
-     <li><a href="https://www.youtube.com/watch?v=kN1XP-Bef7w&list=PLE8uP447fYpgOwKgbypiCGSz7veY2MLGb">Curso de HTML5 desde CERO (Completo)</a></li>
-     <li><a href="https://www.youtube.com/watch?v=OWKXEJN67FE&list=PLE8uP447fYpgOwKgbypiCGSz7veY2MLGb&index=2">Curso de CSS desde CERO (Completo)</a></li>
-     <li><a href="https://www.youtube.com/watch?v=EbMi1Qj4rVE&list=PLE8uP447fYpgOwKgbypiCGSz7veY2MLGb&index=5">Curso de JAVASCRIPT desde CERO (Completo) - Nivel Master</a></li>
- </ul>
+    <div class="container">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+                <h1>Custom jumbotron</h1>
+                <p>Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+                <button class="btn btn-outline-light">Example button</button>
+            </div>
+        </div>
+        
+        <div class="container py-5">
+            <div id="liveAlertPlaceholder"></div>
+            <button  class="btn btn-info" id="liveAlertBtn">Show live alert</button>
+        </div>   
+        <script>    
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            
+            const alert = (message, type) => {
+                const wrapper = document.createElement('div')
+                wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `<div>${message}</div>`,
+            '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+         '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+         }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+            if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+            alert('Nice, you triggered this alert message!', 'success')
+             })
+        }
+        </script>
+</div>
+<div class="container py-5">
+    <form class="d-grid gap-5">
+        <input class="form-control form-control-lg" type="text" placeholder="Ingrese su  Nombre" aria-label="Nombre">
+        <input class="form-control" type="tel" placeholder="123-4567-8901" aria-label="Numero Telefonico">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba su comentario" ></textarea>
+    </form>
+</div>
+
+
+<div class="container">
+  <div class="h-100 p-5 bg-light border rounded-3 disp d-flex justify-content-center">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">Moises Lugo</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">PROGRAMADOR</h5>
+          <p class="card-text">proto sere cononcido como programador.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">moiseslugo9134@gmail.com</div>
+      </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </body>
 </html>
